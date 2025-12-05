@@ -11,5 +11,42 @@
     />
     <title>Test task</title>
   </head>
-  <body></body>
+  <body>
+    <div class="page">
+      <main class="page__main">
+        <header class="header">
+          <span class="header__text">Enjoy your studying!</span>
+          <h1 class="header__title">Our online courses</h1>
+        </header>
+        <section class="courses">
+          <div class="courses__toolbar">
+            <nav class="courses__toolbar-nav">
+              <ul class="js-courses-nav courses__toolbar-nav-items"></ul>
+            </nav>
+            <form class="js-courses-search courses__search" role="search">
+              <input
+                class="js-courses__search-input courses__search-input"
+                type="search"
+                placeholder="Search course..."
+              />
+              <button
+                class="courses__search-button"
+                type="submit"
+                aria-label="Search"
+              >
+                <span class="courses__search-button-icon"></span>
+              </button>
+            </form>
+          </div>
+          <div class="js-courses-lists courses__cards"></div>
+          <div class="courses__load-container">
+            <button type="button" class="courses__load-btn">
+              <span class="courses__load-btn-icon"></span>
+              <span class="courses__load-btn-text">Load more</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
