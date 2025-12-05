@@ -1,0 +1,95 @@
+@use "../abstracts/index" as *;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $color_grey_900;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.625rem + 1.875vw, 2.875rem);
+  line-height: 1.2;
+}
+
+button {
+  border: none;
+  padding: 0;
+  color: inherit;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background: none;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../assets/images/background.png") center top / cover
+      no-repeat;
+    z-index: -1;
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  @include bp-xl($bp-xl) {
+    max-width: 1270px;
+  }
+
+  @include bp-lg($bp-lg) {
+    max-width: 1024px;
+    padding: 40px 20px;
+  }
+
+  @include bp-md($bp-md) {
+    max-width: 768px;
+    padding: 26px 16px;
+  }
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+}

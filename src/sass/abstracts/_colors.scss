@@ -1,0 +1,24 @@
+$color_primary: #ff3f3a;
+
+$color_danger: #ff4242;
+$color_success: #03cea4;
+$color_info: #5a87fc;
+$color_warning: #f89828;
+
+$color-category-design: #f52f6e;
+$color-category-dev: #7772f1;
+
+$color-grey-300: #e5e8ed;
+$color_grey_600: #9a9ca5;
+$color_grey_800: #424551;
+$color_grey-900: #1e212c;
+
+$course-colors: (
+  primary: $color_primary,
+  danger: $color_danger,
+  success: $color_success,
+  info: $color_info,
+  warning: $color_warning,
+  design: $color-category-design,
+  dev: $color-category-dev,
+);
