@@ -1,0 +1,13 @@
+@use "../abstracts/index" as *;
+
+.header {
+  text-align: center;
+  color: $color_grey-900;
+
+  &__text {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+}

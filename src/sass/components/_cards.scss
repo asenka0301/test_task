@@ -1,0 +1,75 @@
+@use "sass:map";
+@use "../abstracts/index" as *;
+
+.courses__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-top: 60px;
+
+  .courses__card {
+    border: 1px solid $color-grey-300;
+    border-radius: $border-radius-4;
+    box-shadow: 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+      0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.1);
+    }
+  }
+
+  .courses__card-img {
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius-4;
+    object-fit: cover;
+  }
+
+  .courses__card-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 16px;
+
+    .courses__card-badge {
+      padding: 1px 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: $border-radius-4;
+      @each $name, $color in map.remove($course-colors, primary) {
+        &--#{$name} {
+          background-color: $color;
+        }
+      }
+    }
+
+    .courses__card-title {
+      font-size: 20px;
+    }
+
+    .courses__card-info {
+      font-size: 18px;
+      color: $color_grey_600;
+    }
+    .courses__card-info--price {
+      color: $color_danger;
+    }
+  }
+
+  @include bp-lg($bp-lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  @include bp-sm($bp-sm) {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    .courses__card-info-container {
+      padding: 10px;
+    }
+  }
+}

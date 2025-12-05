@@ -1,0 +1,21 @@
+.courses__load-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  .courses__load-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    .courses__load-btn-icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("../assets/images/load.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
